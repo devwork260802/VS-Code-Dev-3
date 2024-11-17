@@ -1,72 +1,29 @@
-body{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
-  background-color: antiquewhite;
+body {
+   background: url('http://www.noqta.it/dromoscopio/img/pattern_39.gif');
 }
-h1{
-  font-size: 4rem;
-  text-align: center;
-  color: black;
-  box-shadow: 2px 2px white;
-  
+#rotate {
+    margin: 50px auto 0;
+    width: 500px;
 }
-div {
-    perspective: 500px;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.transition-duration(@time) {
+    -webkit-transition-duration: @time;
+    -moz-transition-duration: @time;
+    -o-transition-duration: @time;
+    transition-duration: @time;
 }
-img{
-    width:400px;
-    height:400px;
+.transform(@angle) {
+    -webkit-transform:rotate(@angle);
+    -moz-transform:rotate(@angle);
+    -o-transform:rotate(@angle);
+    transform: rotate(@angle);
 }
-.square {
-    width: 400px;
-    height: 400px;
-  margin-bottom:120px;
-    background: grey;
-    transform: rotateY(45deg);
-    animation: rotateAnimation 1s linear infinite;
-}
-
-@keyframes rotateAnimation {
-    from {transform: rotateY(45deg);}
-    to {transform: rotateY(225deg);}
-}
-@media screen and  (max-width:900px){
-    h1{
-    font-size: 2rem;
-    text-align: center;
-  }
-  img{
-    width:200px;
-    height: 200px;
-  }
-  .square{
-        width:200px;
-        height:200px;
-        background: grey;
-        transform: rotateY(45deg);
-        animation: rotateAnimation 1s linear infinite;
-        
-    }
-}
-@media screen and  (max-width:600px){
-  h1{
-    font-size: 2rem;
-    text-align: center;
-  }
-    img{
-    width:100px;
-    height:100px;
-  }
-  .square{
-        width:100px;
-        height:100px;
-        background: grey;
-        transform: rotateY(45deg);
-        animation: rotateAnimation 1s linear infinite;
-        
-    }
-}
+.image {
+    .transition-duration(1s);     
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+        &:hover {
+    .transform(360deg);
+    } 
+}  
