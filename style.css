@@ -4,8 +4,8 @@
 
 .slideshow,
 .slideshow:after { 
-    top: -16px; /*Not sure why I needed this fix*/
-        position: fixed;
+    top: -16px; 
+    position: fixed;
     width: 100%;
     height: 100%;
     left: 0px;
@@ -13,7 +13,7 @@
 }
 
 .slideshow li span { 
-        position: absolute;
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0px;
